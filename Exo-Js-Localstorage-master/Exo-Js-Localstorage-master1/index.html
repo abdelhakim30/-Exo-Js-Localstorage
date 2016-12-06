@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<!--exercice 1 -->
+
+
+<div a href "index1" id="result"></div>
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("couleur", "red");
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("couleur");
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+
+
+
+<!--exercice 2 -->
+
+
+    <script>
+    function clickCounter() {
+        if(typeof(Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount)+1;
+            } else {
+                localStorage.clickcount = 1;
+            }
+            document.getElementById("result").innerHTML = "Vous avez cliquer  " + localStorage.clickcount + " fois.";
+        } else {
+            alert("localStorage n'est pas supporté");
+        }
+    }
+    </script>
+<script>
+
+</script>
+
+    </head>
+    <body>
+
+
+    <p><button onclick="clickCounter()" type="button">Click </button></p>
+    <div id="result"></div>
+
+    <li><a href="index1.html">page 2</a></li>
+
+<!--exercice 3 -->
+  </body>
+</html>
