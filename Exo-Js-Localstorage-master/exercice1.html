@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<p id="p1">
+</p>
+<p id="p2">
+</p>
+
+    <script type="text/javascript">
+    var couleur = "red";
+    var hexadécimale = "#FF0000";
+    localStorage.setItem ("couleur", couleur);
+    localStorage.setItem ("colorhexadécimale",hexadécimale);
+
+    </script>
+
+    <script type="text/javascript">
+    document.getElementsById('1').innerHTML = "Couleur : " + localStorage.getItem ('couleur');
+    document.getElementById('2').innerHTML = "hexadécimale: " + localStorage.getItem ('hexadécimale');
+
+    </script>
+  </body>
+</html>
